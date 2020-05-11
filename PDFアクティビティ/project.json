@@ -1,7 +1,7 @@
 {
   "name": "PDFアクティビティ",
   "description": "空のプロジェクト",
-  "main": "DataTableを作って書き込むパターン.xaml",
+  "main": "PDFtoDataTable.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.8.4-preview]",
     "UiPath.Mail.Activities": "[1.8.4-preview]",

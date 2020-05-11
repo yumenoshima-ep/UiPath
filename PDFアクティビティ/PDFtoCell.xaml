@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1186,1305" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1186,2017" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="24">
       <x:String>System.Activities</x:String>
@@ -51,7 +51,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="DataTableを作って書き込むパターン" DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="476,1140" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="DataTableを作って書き込むパターン" DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="608,1852" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strText" />
       <Variable x:TypeArguments="s:String[]" Name="arrTest" />
@@ -66,8 +66,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadPDFText DisplayName="PDF のテキストを読み込み" FileName="行程表.pdf" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="ReadPDFText_2" PreserveFormatting="True" Range="All" Text="[strText]" />
-    <Sequence DisplayName="文字列の配列化　シーケンス" sap:VirtualizedContainerService.HintSize="434,465" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <ui:ReadPDFText DisplayName="PDF のテキストを読み込み" FileName="Koteihyo.pdf" sap:VirtualizedContainerService.HintSize="566,59" sap2010:WorkflowViewState.IdRef="ReadPDFText_2" PreserveFormatting="True" Range="All" Text="[strText]" />
+    <Sequence DisplayName="文字列の配列化　シーケンス" sap:VirtualizedContainerService.HintSize="566,465" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -102,20 +102,20 @@
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
     </Sequence>
-    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" DisplayName="Excel アプリケーション スコープ" sap:VirtualizedContainerService.HintSize="434,413" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" Visible="False" Workbook="[wbBook]" WorkbookPath="Result1.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" DisplayName="Excel アプリケーション スコープ" sap:VirtualizedContainerService.HintSize="566,1125" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" Visible="False" Workbook="[wbBook]" WorkbookPath="Result1.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="376,304" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="532,1016" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[intRow]" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[arrTest]">
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[intRow]" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="490,763" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[arrTest]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
@@ -139,14 +139,10 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="列インデックス(intCol)をアルファベットに変換する&#xD;&#xA;列インデックス（intCol）は0から始まるのでセルに書き込むときは+1しないといけない" DisplayName="Invoke アルファベット変換 workflow" sap:VirtualizedContainerService.HintSize="334,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="アルファベット変換.xaml">
+                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="列インデックス(intCol)をアルファベットに変換する&#xA;列インデックス（intCol）は0から始まるのでセルに書き込むときは+1しないといけない" DisplayName="Invoke アルファベット変換 workflow" sap:VirtualizedContainerService.HintSize="334,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="IndexToAlphabet.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
-                                <OutArgument x:TypeArguments="x:String" x:Key="strColumnAlphabet">
-                                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strAlphabet" />
-                                </OutArgument>
-                                <InArgument x:TypeArguments="x:Int32" x:Key="intColumnIndex">
-                                  <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="intCol + 1" />
-                                </InArgument>
+                                <OutArgument x:TypeArguments="x:String" x:Key="strColumnAlphabet">[strAlphabet]</OutArgument>
+                                <InArgument x:TypeArguments="x:Int32" x:Key="intColumnIndex">[intCol + 1]</InArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -170,13 +166,13 @@
               </ui:ForEach.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEach>
-            <ui:ExcelSaveWorkbook DisplayName="ブックを保存" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ExcelSaveWorkbook_1" />
-            <ui:ExcelCloseWorkbook DisplayName="ブックを閉じる" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelCloseWorkbook_1" Workbook="[wbBook]" />
+            <ui:ExcelSaveWorkbook DisplayName="ブックを保存" sap:VirtualizedContainerService.HintSize="490,22" sap2010:WorkflowViewState.IdRef="ExcelSaveWorkbook_1" />
+            <ui:ExcelCloseWorkbook DisplayName="ブックを閉じる" sap:VirtualizedContainerService.HintSize="490,59" sap2010:WorkflowViewState.IdRef="ExcelCloseWorkbook_1" Workbook="[wbBook]" />
           </Sequence>
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
