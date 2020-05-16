@@ -1,0 +1,113 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1158,922" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="22">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="15">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="527,757" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーを開く" sap:VirtualizedContainerService.HintSize="485,473" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://connect.uipath.com/ja/marketplace/all-components">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,372" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="strRecordCount" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="aaname" DisplayName="属性を取得 'B'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
+              <ui:GetAttribute.Result>
+                <OutArgument x:TypeArguments="x:String">[strRecordCount]</OutArgument>
+              </ui:GetAttribute.Result>
+              <ui:GetAttribute.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="03a4e105-b2f4-4d59-a582-0f518e28bc33" InformativeScreenshot="b9f3300964479273c088a63ca932046a" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;b' idx='3' tag='B' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetAttribute.Target>
+            </ui:GetAttribute>
+            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="構造化データを抽出 'DIV  __next'" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' class='LayoutMain__LayoutContainer-sc-51zvz8-0 oSLrX' idx='1'/&gt;&lt;webctrl tag='div' class='LayoutMain__LayoutContentContainer-sc-51zvz8-1 iabNnU' idx='1'/&gt;&lt;webctrl tag='div' class='AllComponentsPage__Wrapper-sc-1ujk77i-0 bbzggs' idx='1'/&gt;&lt;webctrl tag='div' class='AllComponentsPage__ExploreComponentsInnerContainer-sc-1ujk77i-1 idpYFD' idx='1'/&gt;&lt;webctrl tag='div' class='ExplorePeopleContainer__CardOuterContainer-sc-12zlyz9-8 zFCmi' idx='1'/&gt;&lt;webctrl tag='div' class='ExplorePeopleContainer__CardContainer-sc-12zlyz9-1 iCYMCy' idx='1'/&gt;&lt;webctrl tag='a' class='ComponentCard__Container-sc-2bqei4-0 hnzSJN ComponentGrid__ComponentGridCard-xqmm23-1 lcUtvm'/&gt;&lt;/row&gt;&lt;column exact='1' name='カテゴリ' attr='text' name2='URL' attr2='href'&gt;&lt;webctrl tag='div' class='LayoutMain__LayoutContainer-sc-51zvz8-0 oSLrX' idx='1'/&gt;&lt;webctrl tag='div' class='LayoutMain__LayoutContentContainer-sc-51zvz8-1 iabNnU' idx='1'/&gt;&lt;webctrl tag='div' class='AllComponentsPage__Wrapper-sc-1ujk77i-0 bbzggs' idx='1'/&gt;&lt;webctrl tag='div' class='AllComponentsPage__ExploreComponentsInnerContainer-sc-1ujk77i-1 idpYFD' idx='1'/&gt;&lt;webctrl tag='div' class='ExplorePeopleContainer__CardOuterContainer-sc-12zlyz9-8 zFCmi' idx='1'/&gt;&lt;webctrl tag='div' class='ExplorePeopleContainer__CardContainer-sc-12zlyz9-1 iCYMCy' idx='1'/&gt;&lt;webctrl tag='a' class='ComponentCard__Container-sc-2bqei4-0 hnzSJN ComponentGrid__ComponentGridCard-xqmm23-1 lcUtvm'/&gt;&lt;webctrl tag='div' class='ComponentCard__TopContainer-sc-2bqei4-1 kIOgPE' idx='1'/&gt;&lt;webctrl tag='div' class='ComponentCard__ComponentType-sc-2bqei4-6 dJjCbC' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='星' attr='title'&gt;&lt;webctrl tag='div' class='LayoutMain__LayoutContainer-sc-51zvz8-0 oSLrX' idx='1'/&gt;&lt;webctrl tag='div' class='LayoutMain__LayoutContentContainer-sc-51zvz8-1 iabNnU' idx='1'/&gt;&lt;webctrl tag='div' class='AllComponentsPage__Wrapper-sc-1ujk77i-0 bbzggs' idx='1'/&gt;&lt;webctrl tag='div' class='AllComponentsPage__ExploreComponentsInnerContainer-sc-1ujk77i-1 idpYFD' idx='1'/&gt;&lt;webctrl tag='div' class='ExplorePeopleContainer__CardOuterContainer-sc-12zlyz9-8 zFCmi' idx='1'/&gt;&lt;webctrl tag='div' class='ExplorePeopleContainer__CardContainer-sc-12zlyz9-1 iCYMCy' idx='1'/&gt;&lt;webctrl tag='a' class='ComponentCard__Container-sc-2bqei4-0 hnzSJN ComponentGrid__ComponentGridCard-xqmm23-1 lcUtvm'/&gt;&lt;webctrl tag='div' class='ComponentCard__TopContainer-sc-2bqei4-1 kIOgPE' idx='1'/&gt;&lt;webctrl tag='div' class='ComponentCard__RatingContainer-sc-2bqei4-7 jKCwhd' idx='1'/&gt;&lt;webctrl tag='div' class='widget-ratings' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='Name' attr='text'&gt;&lt;webctrl tag='div' class='LayoutMain__LayoutContainer-sc-51zvz8-0 oSLrX' idx='1'/&gt;&lt;webctrl tag='div' class='LayoutMain__LayoutContentContainer-sc-51zvz8-1 iabNnU' idx='1'/&gt;&lt;webctrl tag='div' class='AllComponentsPage__Wrapper-sc-1ujk77i-0 bbzggs' idx='1'/&gt;&lt;webctrl tag='div' class='AllComponentsPage__ExploreComponentsInnerContainer-sc-1ujk77i-1 idpYFD' idx='1'/&gt;&lt;webctrl tag='div' class='ExplorePeopleContainer__CardOuterContainer-sc-12zlyz9-8 zFCmi' idx='1'/&gt;&lt;webctrl tag='div' class='ExplorePeopleContainer__CardContainer-sc-12zlyz9-1 iCYMCy' idx='1'/&gt;&lt;webctrl tag='a' class='ComponentCard__Container-sc-2bqei4-0 hnzSJN ComponentGrid__ComponentGridCard-xqmm23-1 lcUtvm'/&gt;&lt;webctrl tag='div' class='ComponentCard__BottomContainer-sc-2bqei4-3 elzsve' idx='1'/&gt;&lt;webctrl tag='h3' class='ComponentCard__ComponentName-sc-2bqei4-9 gaaoRS' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='ダウンロード数' attr='text'&gt;&lt;webctrl tag='div' class='LayoutMain__LayoutContainer-sc-51zvz8-0 oSLrX' idx='1'/&gt;&lt;webctrl tag='div' class='LayoutMain__LayoutContentContainer-sc-51zvz8-1 iabNnU' idx='1'/&gt;&lt;webctrl tag='div' class='AllComponentsPage__Wrapper-sc-1ujk77i-0 bbzggs' idx='1'/&gt;&lt;webctrl tag='div' class='AllComponentsPage__ExploreComponentsInnerContainer-sc-1ujk77i-1 idpYFD' idx='1'/&gt;&lt;webctrl tag='div' class='ExplorePeopleContainer__CardOuterContainer-sc-12zlyz9-8 zFCmi' idx='1'/&gt;&lt;webctrl tag='div' class='ExplorePeopleContainer__CardContainer-sc-12zlyz9-1 iCYMCy' idx='1'/&gt;&lt;webctrl tag='a' class='ComponentCard__Container-sc-2bqei4-0 hnzSJN ComponentGrid__ComponentGridCard-xqmm23-1 lcUtvm'/&gt;&lt;webctrl tag='div' class='ComponentCard__BottomContainer-sc-2bqei4-3 elzsve' idx='1'/&gt;&lt;webctrl tag='div' class='ComponentCard__Footer-sc-2bqei4-11 bNwrLx' idx='1'/&gt;&lt;webctrl tag='div' class='ComponentCard__DownloadCount-sc-2bqei4-12 bAYBeG' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="[CInt(strRecordCount)]" NextLinkSelector="&lt;webctrl aaname='次へ' tag='A' /&gt;" SimulateClick="True">
+              <ui:ExtractData.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e56003a5-ae13-4ed7-b948-c117aa0d1d67" InformativeScreenshot="145e13e2f8bf8e1d0ba863dcb10fc78e" Selector="&lt;webctrl id='__next' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:ExtractData.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ExtractData>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:OpenBrowser>
+    <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" DataTable="[ExtractDataTable]" Delimitator="Comma" DisplayName="CSV に書き込み" FilePath="Result.csv" sap:VirtualizedContainerService.HintSize="485,152" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" />
+  </Sequence>
+</Activity>
